@@ -1,7 +1,6 @@
 # [Equipo-XX] Ingenieria-de-Software 2023-1S
 
 **Integrantes:**
-- Juan David Cardenas Jimenez - jucardenasj@unal.edu.co 
 - Daniel Durango Henao - ddurango@unal.edu.co
 - Daniel Gonzales Henao - dgonzalezhe@unal.edu.co
 - Deiner Luis Vitola Martinez - dvitola@unal.edu.co
