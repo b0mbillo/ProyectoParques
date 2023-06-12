@@ -1,5 +1,5 @@
 import pygame
-from Constantes import *
+from .Constantes import *
 
 colores = [ROJO,AMARILLO,AZUL,VERDE]
 class carcel:

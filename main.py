@@ -1,7 +1,7 @@
 import pygame
-from Constantes import *
-from Dado import *
-import Tablero
+from Parques.Constantes import *
+from Parques.Dado import *
+from Parques.Tablero import tablero
 pygame.init()
 
 pantalla = pygame.display.set_mode((WIDTH,HEIGHT))
@@ -12,7 +12,7 @@ def main():
     correr = True
     while correr:
         pantalla.fill(CPANTALLA)
-        Tablero.tablero(pantalla)
+        tablero(pantalla)
         pygame.display.update()
         
 

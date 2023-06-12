@@ -1,5 +1,5 @@
 import pygame
-from Constantes import *
+from .Constantes import *
 
 class casilla:
     tipo = None

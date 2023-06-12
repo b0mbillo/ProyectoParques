@@ -1,5 +1,5 @@
 import pygame
-from  Constantes import *
+from .Constantes import *
 
 class fondo:
     def __init__(self,pantalla):
