@@ -1,4 +1,4 @@
-# [Equipo-XX] Ingenieria-de-Software 2023-1S
+# Ingenieria-de-Software 2023-1S
 
 **Integrantes:**
 - Daniel Durango Henao - ddurango@unal.edu.co
@@ -8,4 +8,3 @@
 - Juan Camilo Bastidas Alvarez - jbastidasa@unal.edu.co
 - Brando Yesid Montoya Jaramillo - bmontoyaj@unal.edu.co
 - Juan Pablo Baquero Arboleda - jbaqueroa@unal.edu.co
-
