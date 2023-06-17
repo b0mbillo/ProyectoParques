@@ -1,21 +1,26 @@
 import pygame
-from Parques.Constantes import *
-from Parques.Dado import *
-from Parques.Tablero import tablero
+from Parques import *
 pygame.init()
 
 pantalla = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Parques")
+icono = pygame.image.load("img/r_ficha.png")
+pygame.display.set_icon(icono)
+
+tablero = tablero(pantalla)
+fichas = ficha.crearFichas(pantalla)
 
 
 def main():
     correr = True
     while correr:
-        pantalla.fill(CPANTALLA)
-        tablero(pantalla)
+        pantalla.fill(COLOR_PANTALLA)
+        tablero.crearTablero()
+        for jugador in fichas:
+            for ficha in jugador:
+                ficha.dibujarFicha() 
         pygame.display.update()
         
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 correr = False
@@ -29,5 +34,6 @@ def main():
                     print("dado 1: {}, dado 2: {}".format(tirada[0],tirada[1]))
                     
     pygame.quit()
+
 
 main()
