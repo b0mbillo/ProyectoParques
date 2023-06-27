@@ -1,12 +1,1 @@
-parques/__pycache__/__init__.cpython-311.pyc
-parques/__pycache__/carcel.cpython-311.pyc
-parques/__pycache__/casilla.cpython-311.pyc
-parques/__pycache__/cielo.cpython-311.pyc
-parques/__pycache__/configuracion.cpython-311.pyc
-parques/__pycache__/constantes.cpython-311.pyc
-parques/__pycache__/dado.cpython-311.pyc
-parques/__pycache__/datos.cpython-311.pyc
-parques/__pycache__/ficha.cpython-311.pyc
-parques/__pycache__/fondo.cpython-311.pyc
-parques/__pycache__/interfaz_configuracion.cpython-311.pyc
-parques/__pycache__/tablero.cpython-311.pyc
+parques/__pycache__/
