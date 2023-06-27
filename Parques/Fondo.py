@@ -1,10 +1,10 @@
 import pygame
-from .Constantes import FONDO,X_TABLERO,Y_TABLERO,W_TABLERO,H_TABLERO
+from .datos import FONDO_TABLERO,X_TABLERO,Y_TABLERO,W_TABLERO,H_TABLERO
 
-class fondo:
+class Fondo:
     def __init__(self,pantalla):
         self.pantalla = pantalla
         self.crearFondo()
         
     def crearFondo(self):
-        pygame.draw.rect(self.pantalla,FONDO,(X_TABLERO,Y_TABLERO,W_TABLERO,H_TABLERO))
+        pygame.draw.rect(self.pantalla,FONDO_TABLERO,(X_TABLERO,Y_TABLERO,W_TABLERO,H_TABLERO))

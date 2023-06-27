@@ -1,7 +1,7 @@
 import pygame
-from .Constantes import COLORES,X_TABLERO,T_CARCEL
+from .datos import COLORES,X_TABLERO,T_CARCEL
 
-class ficha:
+class Ficha:
     def __init__(self,idJ,idF,pantalla):
         self.idJugador = idJ
         self.idFicha = idF
@@ -23,14 +23,11 @@ class ficha:
             case _: 
                 self.color = COLORES[self.idJugador]
 
-
-
-                
     def crearFichas(pantalla):
         fichas = [[],[],[],[]]
         for idJugador in range(4):
             for idFicha in range(1):
-                f = ficha(idJugador,idFicha,pantalla)
+                f = Ficha(idJugador,idFicha,pantalla)
                 fichas[idJugador].append(f) 
         return fichas
     

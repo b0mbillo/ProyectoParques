@@ -1,6 +1,7 @@
 #__all__ = ["Carcel","Casilla","Cielo","Constantes","Dado","Ficha","Fondo","Jugador","Tablero","Turno"]
 
-from .Constantes import *
-from .Tablero import tablero
-from .Ficha import ficha 
-from .Dado import *
+from .datos import *
+from .tablero import Tablero
+from .ficha import Ficha 
+from .dado import *
+from .interfaz_configuracion import InterfazConfig

@@ -1,7 +1,7 @@
 import pygame
-from .Constantes import COLORES,T_CARCEL
+from .datos import COLORES,T_CARCEL
 
-class carcel:
+class Carcel:
     def __init__(self,pantalla,x,y,color):
         self.pantalla = pantalla
         self.pos = x,y
@@ -9,4 +9,4 @@ class carcel:
 
     def crearCarcel(self,c):
         color = COLORES[c]
-        pygame.draw.circle(self.pantalla,color,self.pos,T_CARCEL//2)
+        pygame.draw.circle(self.pantalla,color,self.pos,T_CARCEL//2.5)
