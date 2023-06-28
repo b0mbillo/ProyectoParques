@@ -23,9 +23,7 @@ class InterfazConfig:
       #campos de texto de los nombres
       elementos = []
       y = self.yPadding
-      i = 0
       for titulo in InterfazConfig.subtitulos:
-         i+=1
          y += self.heightPantalla*0.08
          if "Nombre Jugador" in titulo:
             posNumero = titulo.find("#")

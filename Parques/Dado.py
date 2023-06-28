@@ -1,11 +1,11 @@
 from random import randint
 
 class Dado: 
-    val = 0
-    tamaño = 6
+    tamañoDefault = 6
     def __init__(self,t = None):
-        if t == None: t = Dado.tamaño 
+        if t is None: t = Dado.tamañoDefault 
         self.tamaño = t
+        self.val = 0
     
     def generarValor(self):
-        self.val = randint(1,self.tamaño)
+        self.val = randint(1,self.tamañoDefault)

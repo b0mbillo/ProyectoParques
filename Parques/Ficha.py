@@ -2,11 +2,13 @@ import pygame
 from .datos import COLORES,X_TABLERO,T_CARCEL
 
 class Ficha:
+    #cantidadjugadores = 4
     def __init__(self,idJ,idF,pantalla):
         self.idJugador = idJ
         self.idFicha = idF
         self.estado = "Encarcelado"
         self.pantalla = pantalla
+        #estos parametros se podrian definir en otro archivo
         match self.idJugador:
             case 0:
                 self.pos = (X_TABLERO+T_CARCEL/2,T_CARCEL/2)
@@ -27,8 +29,8 @@ class Ficha:
         fichas = [[],[],[],[]]
         for idJugador in range(4):
             for idFicha in range(1):
-                f = Ficha(idJugador,idFicha,pantalla)
-                fichas[idJugador].append(f) 
+                ficha = Ficha(idJugador,idFicha,pantalla)
+                fichas[idJugador].append(ficha) 
         return fichas
     
     def dibujarFicha(self):

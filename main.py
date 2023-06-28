@@ -1,6 +1,7 @@
 import pygame, pygame_gui, sys, time
 from parques import *
 """hacer un menu inicial jugar-opciones-salir"""
+
 def configuracionPartida(reloj):
     pantallaConfig = pygame.display.set_mode((WIDTH_CONFIG,HEIGHT_CONFIG))
     pygame.display.set_caption("Configuracion Partida")
@@ -10,7 +11,6 @@ def configuracionPartida(reloj):
     manager = pygame_gui.UIManager((WIDTH_CONFIG,HEIGHT_CONFIG))
     interfazConfig = InterfazConfig(pantallaConfig,manager)
     elementos = interfazConfig.crearElementosGUI()
-    
     
     ejecutarConfiguracion = True
     while ejecutarConfiguracion: 
@@ -42,7 +42,6 @@ def configuracionPartida(reloj):
     return pantallaJuego, nombresJugadores
     #tambien RETORNA cantidad de jugadores, diseño y modo
 
-
 def main():
     #inicializar pygame y el reloj
     pygame.init()
@@ -53,14 +52,14 @@ def main():
     pygame.display.set_caption("Parques") #Pyrques luego
     icono = pygame.image.load("img/r_ficha.png")
     pygame.display.set_icon(icono)
+
     #Crear dados
     dado_1 = Dado()
     dado_2 = Dado()
     #Crear Tablero
     tablero = Tablero(pantallaParques,nombresJugadores)
     #Crear Fichas
-    fichas = Ficha.crearFichas(pantallaParques)
-    modo = "corriente"
+    fichas = Ficha.crearFichas(pantallaParques) #se deberia pasar el tablero, no la pantalla
     #Parques
     ejecutarJuego = True
     while ejecutarJuego:
@@ -68,6 +67,7 @@ def main():
         #Dibujar juego
         pantallaParques.fill(COLOR_PANTALLA)
         casillas = tablero.crearTablero()
+        
         for fichasJugador in fichas:
             for ficha in fichasJugador:
                 ficha.dibujarFicha() 
@@ -80,10 +80,11 @@ def main():
                 if event.key == pygame.K_ESCAPE:
                     ejecutarJuego = False
                 if event.key == pygame.K_d:
-                    dado_1.generarValor(); dado_2.generarValor()
-                    tirada = dado_1.val,dado_2.val
-                    print(f"dado 1: {tirada[0]}, dado 2: {tirada[1]}")
+                    dado_1.generarValor() 
+                    dado_2.generarValor()
+                    tablero.tirada(dado_1,dado_2)
         pygame.display.update()
     pygame.quit()
 
-main()
+if __name__ == "__main__":
+    main()

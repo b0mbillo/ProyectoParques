@@ -8,7 +8,7 @@ class Casilla:
     def __init__(self,pantalla,idC,x,y,color,tipo,orientacion):
         self.pantalla = pantalla
         self.idCasilla = idC
-        self.pos = (x,y)
+        self.pos = x,y
         self.color = color
         self.tipo = tipo
         self.orientacion = orientacion
@@ -33,6 +33,7 @@ class Casilla:
             objCasilla = Casilla(pantalla,idCasilla,int(casilla["x"]),int(casilla["y"]),casilla["color"],casilla["tipo"],casilla["orientacion"])
             idCasilla += 1
             casillas.append(objCasilla)
+        return casillas
 
 
     def dibujarCasilla(self):

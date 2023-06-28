@@ -2,6 +2,6 @@
 
 from .datos import *
 from .tablero import Tablero
-from .ficha import Ficha 
-from .dado import *
+from .ficha import Ficha
+from .dado import Dado
 from .interfaz_configuracion import InterfazConfig
