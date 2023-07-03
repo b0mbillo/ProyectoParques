@@ -1,4 +1,4 @@
-# ProyectoParques
+# Pyrques
 
 Replica del juego de mesa Parques con python y pygame 
 
